@@ -1,0 +1,68 @@
+var emoji = document.querySelector("#icon");
+var par = document.querySelector("#par");
+
+let temperature = () =>
+{
+    let opt = document.querySelector("#unit");
+
+    let display = document.querySelector(".value");
+
+    var a  = document.querySelector(".takeval").value;
+
+    if(opt.value == "Celcius") {
+        console.log(a,"C to F", opt.value)
+
+        let F = a * (9/5) + 32
+
+        display.innerHTML = F.toFixed(4) + "F" 
+        if(F < 32) {
+            emoji.style = "color: blue"
+
+            emoji.className = "fa-solid fa-face-grimace"
+
+            par.innerHTML = "Cool at freezing point"
+
+        }
+        else if (F > 122) {
+            emoji.style = "color: red"
+
+            emoji.className = "fa-solid fa-face-dizzy"
+
+            par.innerHTML = "So Warm"
+        }
+        else {
+            emoji.className = "fa-solid fa-face-grin"
+            par.innerHTML = " "
+
+            emoji.style = "color: rgb(254, 174,38)"
+        }
+    }
+    else {
+        console.log(a,"F to C", opt.value)
+
+        let C = (a - 32) * (5/9)
+
+        display.innerHTML = C.toFixed(4) + " C"
+        if(C < 0 ) {
+            emoji.style = "color: blue"
+
+            emoji.className = "fa-solid fa-face-grimace"
+
+            par.innerHTML = "Cool at Freezing point"
+        }
+        else if(C > 50) {
+            emoji.style = "color: red"
+
+            emoji.className = "fa-solid fa-face-dizzy"
+
+            par.innerHTML = "So warm"
+        }
+        else{
+            emoji.className = "fa-solid fa-face-grin"
+
+            par.innerHTML = ""
+            emoji.style = "color: rgb(254,174,38)"
+        }
+    }
+
+}

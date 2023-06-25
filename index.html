@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <!DOCTYPE html>                    <html>                        <head>                        <title>Page Title</title>                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="head">Temperature Converter</div>
+        <div class="emoji">
+            <i id="icon" class="fa-solid fa-face-grin"></i>
+            <p id="par"></p>
+        </div>
+        <div class="boxcontainer">
+        <div class="box1">
+            <p>Degree</p>
+            <input type="number" class="takeval">
+        </div>
+        <div class="box1">
+            <p>Type</p>
+            <select name="" id="unit">
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Celcius">Celcius</option>
+            </select>
+        </div>
+    </div>
+    <div class="valuecontainer">
+        <p>Result</p>
+        <div class="value"></div>
+    </div>
+    <button onclick="temperature()"" class="button">Converter</button>
+    </div>
+</body>
+
+<script src="main.js"></script>
+</html>
